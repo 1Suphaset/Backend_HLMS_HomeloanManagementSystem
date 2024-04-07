@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  backend:
+    container_name: Home_loan
+    build: .
+    ports:
+      - "5000:5000"
+    
