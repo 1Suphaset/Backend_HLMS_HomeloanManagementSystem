@@ -20,11 +20,13 @@ db.sequelize.sync({force:true}).then(() => { //force คือการ
 })
 
 // default route
-app.get('/' , (req,res) => {
-    res.send('This is first page for Homeloan')
-})
+//app.get('/' , (req,res) => {
+//    res.send('This is first page for Homeloan')
+//})
 
-
+require("./app/routes/dashboard.route")(app);
+require("./app/routes/analyze.route")(app);
+require("./app/routes/login.route")(app);
 
 app.listen(PORT, () => {
     console.log('Server connected at port 5000 link:: http://localhost:5000/')
