@@ -6,14 +6,27 @@ module.exports = (sequelize, Datatype) => {
             allowNull: false,
             primaryKey: true
         },
-        name: {
-            type: Datatype.STRING,
-            allowNull: false
-        },
         type: {
             type: Datatype.STRING,
             allowNull: false
+        },
+        product: {
+            type: Datatype.STRING,
+            allowNull: false
+        },
+        ir1: {//อัตราดอกเบี้ยระดับแรก
+            type: Datatype.FLOAT,
+            allowNull: false
+        },
+        ir2: {//อัตราดอกเบี้ยระดับสอง
+            type: Datatype.FLOAT,
+            allowNull: false
+        },
+        eir: {//อัตราดอกเบี้ยประจำปี
+            type: Datatype.FLOAT,
+            allowNull: false
         }
+
     });
     return Interest;
 };

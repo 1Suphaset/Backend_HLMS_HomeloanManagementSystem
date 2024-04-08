@@ -20,9 +20,9 @@ const db = {};
 db.Datatype = Datatype;
 db.sequelize = sequelize;
 
-db.employee = require("../models/employee.model")(sequelize, Datatype);
+db.borrower = require("../models/borrower.model")(sequelize, Datatype);
 db.project = require("../models/project.model")(sequelize, Datatype);
-db.customer = require("../models/customer.model")(sequelize, Datatype);
+db.officer = require("../models/officer.model")(sequelize, Datatype);
 db.interest = require("../models/interest.model")(sequelize, Datatype);
 db.insurance = require("../models/insurance.model")(sequelize, Datatype);
 

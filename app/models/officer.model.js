@@ -1,27 +1,39 @@
 module.exports = (sequelize, Datatype) => {
-    const Employee = sequelize.define("employee",{
-        Customer_ID:{
+    const Officer = sequelize.define("officer",{
+        officer_id:{
             type: Datatype.INTEGER,
             autoIncrement: true,
             allowNull:false,
             primaryKey:true
         },
-        ID_card:{
-            type:Datatype.STRING,
-            allowNull:false
-        },
         name:{
             type:Datatype.STRING,
             allowNull:false
         },
-        occupation:{
+        email:{
             type:Datatype.STRING,
             allowNull:false
         },
-        Genderoccupation:{
+        phone:{
+            type:Datatype.STRING,
+            allowNull:false
+        },
+        team:{
+            type:Datatype.STRING,
+            allowNull:false
+        },
+        commissions:{
+            type:Datatype.INTEGER,
+            allowNull:false
+        },
+        username:{
+            type:Datatype.STRING,
+            allowNull:false
+        },
+        password:{
             type:Datatype.STRING,
             allowNull:false
         }
     });
-    return Employee;
+    return Officer;
 };
